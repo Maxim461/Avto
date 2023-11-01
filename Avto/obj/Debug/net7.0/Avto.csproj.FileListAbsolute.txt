@@ -1,0 +1,15 @@
+/Users/maksli/МДК/ОПП/Avto/Avto/bin/Debug/net7.0/Avto
+/Users/maksli/МДК/ОПП/Avto/Avto/bin/Debug/net7.0/Avto.deps.json
+/Users/maksli/МДК/ОПП/Avto/Avto/bin/Debug/net7.0/Avto.runtimeconfig.json
+/Users/maksli/МДК/ОПП/Avto/Avto/bin/Debug/net7.0/Avto.dll
+/Users/maksli/МДК/ОПП/Avto/Avto/bin/Debug/net7.0/Avto.pdb
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.csproj.AssemblyReference.cache
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.AssemblyInfoInputs.cache
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.AssemblyInfo.cs
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.csproj.CoreCompileInputs.cache
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.dll
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/refint/Avto.dll
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.pdb
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/Avto.genruntimeconfig.cache
+/Users/maksli/МДК/ОПП/Avto/Avto/obj/Debug/net7.0/ref/Avto.dll
