@@ -1,47 +1,64 @@
-﻿using Avto;
+﻿using System.Security.Cryptography;
+using Avto;
 
 class Program
 {
     static void Main()
     {
-        Auto Untitled = new Auto(0, 0, 0, 0, 0); //Создание объекта на основе класса
-
-        Untitled.ToBegin();
-
-        Console.WriteLine("Нажмите 1 чтобы поехать");
-        Console.WriteLine("Нажмите 2 чтобы ускориться");
-        Console.WriteLine("Нажмите 3 чтобы затормозить");
-        Console.WriteLine("Нажмите 4 чтобы запрвиться");
-        Console.WriteLine("Нажмите 5 чтобы посмотреть информацию");
-        Console.WriteLine("Нажмите 6 чтобы прошел час");
+        Auto CarOne = new Auto("Car1", 50, 10);
+        Auto CarTwo = new Auto("Car2", 50, 10);
+        Random random = new Random();
+        double Distance = random.Next(100, 1000);
+        Distance = (Distance / 10) * 100;
+        Console.WriteLine($"Расстояние которое вам нужно проехать: {Distance:f0}");
 
         while (true)
         {
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-            switch (keyInfo.Key)
+            Console.WriteLine("Выберите машину:");
+            int  ChoosingCarIfElse =  int.Parse(Console.ReadLine());
+
+            Auto ChoosingCar;
+
+            if (ChoosingCarIfElse == 1)
             {
-                case ConsoleKey.D1:
-                Untitled.Drive(); //Поехать
+                ChoosingCar = CarOne;
+            }
+            else if (ChoosingCarIfElse == 2)
+            {
+                ChoosingCar = CarTwo;
+            }
+            else
+            {
+                Console.WriteLine("Вы не правильно выбрали машину.\nВведите 1 или 2, далее нажмите Enter.");
+                continue;
+            }
+
+            Console.WriteLine("1 - Вывод информации;");
+            Console.WriteLine("2 - Заправка топливом;");
+            Console.WriteLine("3 - Ехать;");
+            Console.WriteLine("4 - Ускориться;");
+            Console.WriteLine("5 - Затормозить.");
+            int ChoosingAnAction = int.Parse(Console.ReadLine());
+            switch (ChoosingAnAction)
+            {
+                case 1:
+                    ChoosingCar.InformationOutput();
                 break;
 
-                case ConsoleKey.D2:
-                Untitled.SpeedUp();     //Ускорение
-                break;
-                    
-                case ConsoleKey.D3:
-                Untitled.SlowDown(); //Затормозить
+                case 2:
+                    ChoosingCar.Refueling();
                 break;
 
-                case ConsoleKey.D4:
-                Untitled.Refuel(); // Заправиться
+                case 3:
+                    ChoosingCar.Riding();
                 break;
 
-                case ConsoleKey.D5:
-                Untitled.Information(); //Информация
+                case 4:
+                    ChoosingCar.SpeedUp();
                 break;
 
-                case ConsoleKey.D6:
-                Untitled.Hour(); //Час
+                case 5:
+                    ChoosingCar.Braking();
                 break;
             }
         }
