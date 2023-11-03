@@ -38,27 +38,65 @@ namespace Avto
             Console.WriteLine("Введите количетсво бензина:");
             double top = double.Parse(Console.ReadLine());
             NumberGasoline = NumberGasoline + top;
+            if (NumberGasoline > 50)
+            {
+                Console.WriteLine("Бак не может быть больше 50");
+            }
+            
             Console.WriteLine($"Количество бензина в баке: {NumberGasoline};");
         }
 
-        public void Riding()
+        public void Riding(double Speed, int distance)
         {
-            Console.WriteLine("С какой скоростю вы хотите ехать?");
-            Speed = double.Parse(Console.ReadLine());
+            if (Speed <= 0)
+            {
+                Console.WriteLine("Скорость должна быть больше нуля.");
+                return;
+            }
+            double FuelConsumptionPer100Km = Fuel_Сonsumption / 100;
+            double Consumption = distance * FuelConsumptionPer100Km;
+            if (NumberGasoline >= Consumption)
+            {
+                NumberGasoline -= Consumption;
+                Kilometers += distance;
+                Console.WriteLine("Вы приехали");
+                
+            }
+            else
+            {
+                int MaxDistance = (int)(NumberGasoline / FuelConsumptionPer100Km);
+                if (MaxDistance > 0)
+                {
+                    NumberGasoline = 0;
+                    Console.WriteLine($"Недостаточно топлива для поездки на всю дистанцию {distance} км.");
+                    Console.WriteLine($"Машина проехала {MaxDistance} км со скоростью {Speed} км/ч.\nКоличество бензина: {NumberGasoline}");
+                    Kilometers += MaxDistance;
 
-            Console.WriteLine($"Какое расстояние вы хотите проехать на скорости {Speed}?");
-            DistanceUser = double.Parse(Console.ReadLine());
+                    Console.Write("Желаете дозаправить машину? (Да/Нет): ");
+                    string choice = Console.ReadLine();
 
-            Setting();
-            Kilometers += DistanceUser;
-            Console.WriteLine($"Количество бензина в баке: {NumberGasoline};");
-            Console.WriteLine($"Вы проехали: {Kilometers};");
+                    if (choice.ToLower() == "да")
+                    {
+                        Refueling();
+                        Riding(Speed, distance - MaxDistance);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ну и не надо...");
+                        
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Недостаточно топлива для поездки.");
+                }
+            }
         }
 
         public void SpeedUp()
         {
             Console.WriteLine("На сколько вы хотите ускориться?");
-            Speed = +double.Parse(Console.ReadLine());
+            Speed =+ double.Parse(Console.ReadLine());
             Kilometers += DistanceUser;
             Setting();
 

@@ -9,7 +9,7 @@ class Program
         Auto CarTwo = new Auto("Car2", 50, 10);
         Random random = new Random();
         double Distance = random.Next(100, 1000);
-        Distance = (Distance / 10) * 100;
+        Distance = (Distance / 100) * 100;
         Console.WriteLine($"Расстояние которое вам нужно проехать: {Distance:f0}");
 
         while (true)
@@ -50,7 +50,11 @@ class Program
                 break;
 
                 case 3:
-                    ChoosingCar.Riding();
+                    Console.WriteLine("Введите скорость движения (км/ч):");
+                    int Speed = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите расстояние (км):");
+                    int DistanceUser = int.Parse(Console.ReadLine());
+                    ChoosingCar.Riding(Speed, DistanceUser);
                 break;
 
                 case 4:
