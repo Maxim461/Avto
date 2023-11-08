@@ -1,15 +1,11 @@
 ﻿<Properties StartupConfiguration="{17B80C3D-EFA4-4560-A180-552EF49B77CB}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Avto PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Avto/Avto.cs">
     <Files>
-      <File FileName="Avto/Program.cs" Line="57" Column="59" />
-      <File FileName="Avto/Avto.cs" Line="61" Column="40" />
+      <File FileName="Avto/Program.cs" Line="72" Column="77" />
+      <File FileName="Avto/Avto.cs" Line="46" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,4 +22,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Avto PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
 </Properties>
